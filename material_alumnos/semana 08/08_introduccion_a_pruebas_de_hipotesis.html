@@ -665,12 +665,93 @@ width: auto !important;
 height: auto !important;
 z-index: 30 !important;
 }
+#MathJax_Message {
+display: none !important;
+}
+.reveal .slides section.probability-intro figure {
+margin: 0;
+}
+.reveal .slides section.probability-intro .column:first-child img {
+max-height: 430px;
+width: auto;
+}
+.reveal .slides section.probability-intro .column:last-child img {
+max-height: 205px;
+width: auto;
+}
+.reveal .slides section.probability-intro .column:last-child .quarto-figure {
+margin-bottom: 0.4rem;
+}
+.reveal .slides section.compact {
+font-size: 0.72em;
+}
+.reveal .slides section.compact h2 {
+font-size: 1.25em;
+line-height: 1.1;
+margin-bottom: 0.35em;
+}
+.reveal .slides section.compact p,
+.reveal .slides section.compact li {
+line-height: 1.22;
+margin-top: 0.18em;
+margin-bottom: 0.18em;
+}
+.reveal .slides section.compact ul,
+.reveal .slides section.compact ol {
+margin-top: 0.25em;
+margin-bottom: 0.25em;
+}
+.reveal .slides section.compact pre {
+margin-top: 0.35em;
+margin-bottom: 0.35em;
+}
+.reveal .slides section.compact pre code {
+max-height: 360px;
+}
+.reveal .slides section.compact.mid-font div {
+font-size: 26px;
+}
+.reveal .slides section.dense-code {
+font-size: 0.66em;
+}
+.reveal .slides section.dense-code pre {
+margin-top: 0.18em;
+margin-bottom: 0.18em;
+}
+.reveal .slides section.dense-code pre code {
+max-height: 300px;
+}
+.reveal .slides section.figure-compact img {
+max-height: 560px;
+}
+.reveal .slides section.video-compact video {
+max-height: 360px;
+width: auto;
+}
+.empirical-static {
+display: none;
+}
+.print-only {
+display: none !important;
+}
 @media print {
 .reveal-viewport::before {
 height: 20px;
 }
 .reveal .slide-logo {
 max-height: 70px !important;
+}
+.empirical-animated {
+display: none !important;
+}
+.empirical-static {
+display: block !important;
+}
+.screen-only {
+display: none !important;
+}
+.print-only {
+display: block !important;
 }
 }
 @media (max-width: 1100px) {
@@ -1293,9 +1374,9 @@ margin-right: 0; }
 <ul>
 <li class="fragment">La <strong>característica de la población</strong> mencionada suele referirse al valor de un parámetro poblacional. Por ejemplo:
 <ul>
-<li class="fragment"><span class="math inline">\(\mu \lt 25.2 °C\)</span>: La temperatura media en una ciudad específica es menor que <span class="math inline">\(25.2 °C\)</span>.</li>
-<li class="fragment"><span class="math inline">\(p \gt 0.5\)</span>: Más de la mitad de los consumidores se sienten a gusto con una determinada marca.</li>
-<li class="fragment"><span class="math inline">\(\sigma = 15\)</span>: La desviación estándar de las puntuaciones de IQ de los estudiantes universitarios es de <span class="math inline">\(15\)</span>.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>&lt;</mo><mn>25.2</mn><mi>°</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\mu \lt 25.2 °C</annotation></semantics></math>: La temperatura media en una ciudad específica es menor que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>25.2</mn><mi>°</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">25.2 °C</annotation></semantics></math>.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&gt;</mo><mn>0.5</mn></mrow><annotation encoding="application/x-tex">p \gt 0.5</annotation></semantics></math>: Más de la mitad de los consumidores se sienten a gusto con una determinada marca.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>15</mn></mrow><annotation encoding="application/x-tex">\sigma = 15</annotation></semantics></math>: La desviación estándar de las puntuaciones de IQ de los estudiantes universitarios es de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>15</mn><annotation encoding="application/x-tex">15</annotation></semantics></math>.</li>
 </ul></li>
 </ul>
 </div>
@@ -1330,10 +1411,10 @@ margin-right: 0; }
 <ul>
 <li class="fragment">El procedimiento implica plantear dos hipótesis:
 <ul>
-<li class="fragment"><span class="math inline">\(H_0\)</span>: Hipótesis nula (generalmente asociada a situaciones de no cambio)</li>
-<li class="fragment"><span class="math inline">\(H_1\)</span>: Hipótesis alternativa (generalmente asociada a situación efectiva de cambio)</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>: Hipótesis nula (generalmente asociada a situaciones de no cambio)</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>: Hipótesis alternativa (generalmente asociada a situación efectiva de cambio)</li>
 </ul></li>
-<li class="fragment">Una prueba de hipótesis se basa en evidencia empírica y en distribuciones de probabilidad, para determinar si la <strong>hipótesis nula <span class="math inline">\(H_0\)</span></strong> es una afirmación razonable.</li>
+<li class="fragment">Una prueba de hipótesis se basa en evidencia empírica y en distribuciones de probabilidad, para determinar si la <strong>hipótesis nula <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math></strong> es una afirmación razonable.</li>
 </ul>
 </div>
 </section>
@@ -1342,7 +1423,7 @@ margin-right: 0; }
 <p>En general, una prueba de hipótesis tiene pasos ordenados a seguir:</p>
 <div>
 <ol type="1">
-<li class="fragment">Se establecen <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span>.</li>
+<li class="fragment">Se establecen <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>.</li>
 <li class="fragment">Se selecciona el nivel de significancia.</li>
 <li class="fragment">Se identifica el estadístico de prueba.</li>
 <li class="fragment">Se formula una regla para tomar decisiones.</li>
@@ -1362,12 +1443,12 @@ margin-right: 0; }
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Entonces, ¿qué es <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span>?</strong></p>
+<p><strong>Entonces, ¿qué es <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>?</strong></p>
 </div>
 <div class="callout-content">
 <ul>
-<li><span class="math inline">\(H_0\)</span> es la hipótesis nula, la cual representa la afirmación de que <em>no existe efecto</em> o <em>no hay diferencia</em> en los parámetros involucrados.</li>
-<li><span class="math inline">\(H_1\)</span> es la hipótesis alternativa, la cual como investigadores conjeturamos, donde establecemos el efecto a evaluar.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> es la hipótesis nula, la cual representa la afirmación de que <em>no existe efecto</em> o <em>no hay diferencia</em> en los parámetros involucrados.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math> es la hipótesis alternativa, la cual como investigadores conjeturamos, donde establecemos el efecto a evaluar.</li>
 </ul>
 </div>
 </div>
@@ -1381,15 +1462,15 @@ margin-right: 0; }
 <div class="column" style="width:50%;">
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(H_0\)</span>: <strong>No hay diferencia en el rendimiento académico</strong> entre los estudiantes de la UST y los de la UDP en Métodos Cuantitativos.</li>
-<li class="fragment"><span class="math inline">\(\mu_{ust} = \mu_{udp}\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>: <strong>No hay diferencia en el rendimiento académico</strong> entre los estudiantes de la UST y los de la UDP en Métodos Cuantitativos.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mrow><mi>u</mi><mi>s</mi><mi>t</mi></mrow></msub><mo>=</mo><msub><mi>μ</mi><mrow><mi>u</mi><mi>d</mi><mi>p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mu_{ust} = \mu_{udp}</annotation></semantics></math></li>
 </ul>
 </div>
 </div><div class="column" style="width:50%;">
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(H_1\)</span>: Los estudiantes de la UST <strong>muestran un rendimiento académico diferente</strong> al de los estudiantes de la UDP en Métodos Cuantitativos.</li>
-<li class="fragment"><span class="math inline">\(\mu_{ust} \neq \mu_{udp}\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>: Los estudiantes de la UST <strong>muestran un rendimiento académico diferente</strong> al de los estudiantes de la UDP en Métodos Cuantitativos.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mrow><mi>u</mi><mi>s</mi><mi>t</mi></mrow></msub><mo>≠</mo><msub><mi>μ</mi><mrow><mi>u</mi><mi>d</mi><mi>p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mu_{ust} \neq \mu_{udp}</annotation></semantics></math></li>
 </ul>
 </div>
 </div></div>
@@ -1407,15 +1488,15 @@ margin-right: 0; }
 <div class="column" style="width:50%;">
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(H_0\)</span>: Los estudiantes de la UST <strong>no muestran un rendimiento académico superior</strong> que los estudiantes de la UDP en Métodos Cuantitativos.</li>
-<li class="fragment"><span class="math inline">\(\mu_{ust} \leq \mu_{udp}\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>: Los estudiantes de la UST <strong>no muestran un rendimiento académico superior</strong> que los estudiantes de la UDP en Métodos Cuantitativos.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mrow><mi>u</mi><mi>s</mi><mi>t</mi></mrow></msub><mo>≤</mo><msub><mi>μ</mi><mrow><mi>u</mi><mi>d</mi><mi>p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mu_{ust} \leq \mu_{udp}</annotation></semantics></math></li>
 </ul>
 </div>
 </div><div class="column" style="width:50%;">
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(H_1\)</span>: Los estudiantes de la UST <strong>muestran un rendimiento académico superior</strong> al de los estudiantes de la UDP en Métodos Cuantitativos.</li>
-<li class="fragment"><span class="math inline">\(\mu_{ust} \gt \mu_{udp}\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>: Los estudiantes de la UST <strong>muestran un rendimiento académico superior</strong> al de los estudiantes de la UDP en Métodos Cuantitativos.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mrow><mi>u</mi><mi>s</mi><mi>t</mi></mrow></msub><mo>&gt;</mo><msub><mi>μ</mi><mrow><mi>u</mi><mi>d</mi><mi>p</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\mu_{ust} \gt \mu_{udp}</annotation></semantics></math></li>
 </ul>
 </div>
 </div></div>
@@ -1428,16 +1509,16 @@ margin-right: 0; }
 <section id="prueba-de-hipótesis-6" class="slide level2">
 <h2>Prueba de hipótesis</h2>
 <ul>
-<li>Tanto la aceptación como el rechazo de <span class="math inline">\(H_0\)</span> dependen de los resultados de evidencia empírica muestral, lo cual puede estar sujeto a <strong>posibles errores asociados</strong>.</li>
+<li>Tanto la aceptación como el rechazo de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> dependen de los resultados de evidencia empírica muestral, lo cual puede estar sujeto a <strong>posibles errores asociados</strong>.</li>
 </ul>
 </section>
 <section id="prueba-de-hipótesis-error-tipo-i" class="slide level2">
 <h2>Prueba de hipótesis: Error Tipo I</h2>
 <div>
 <ul>
-<li class="fragment">Error Tipo I: <span class="math inline">\(P(\text{rechazar }H_0/H_0 \text{ es verdadera})\)</span></li>
-<li class="fragment">La probabilidad Tipo I se denota como <span class="math inline">\(\alpha\)</span>, la cual corresponde al <strong>nivel de significancia</strong> de la prueba de hipótesis.</li>
-<li class="fragment">La probabilidad real de cometer Error Tipo I se conoce como <strong>valor-p</strong>.</li>
+<li class="fragment">Error Tipo I: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mtext mathvariant="normal">rechazar </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>H</mi><mn>0</mn></msub><mi>/</mi><msub><mi>H</mi><mn>0</mn></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> es verdadera</mtext></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{rechazar }H_0/H_0 \text{ es verdadera})</annotation></semantics></math></li>
+<li class="fragment">La probabilidad Tipo I se denota como <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>, la cual corresponde al <strong>nivel de significancia</strong> de la prueba de hipótesis.</li>
+<li class="fragment">El <strong>valor-p</strong> es la probabilidad, asumiendo verdadera la hipótesis nula, de observar un resultado al menos tan extremo como el obtenido.</li>
 </ul>
 </div>
 </section>
@@ -1445,9 +1526,9 @@ margin-right: 0; }
 <h2>Prueba de hipótesis: Error Tipo II</h2>
 <div>
 <ul>
-<li class="fragment">Error Tipo II: <span class="math inline">\(P(\text{no rechazar }H_0/H_0 \text{ es falsa})\)</span></li>
-<li class="fragment">Se denota <span class="math inline">\(\beta\)</span> al Error Tipo II en una prueba de hipótesis teniendo en cuenta el nivel de significancia <span class="math inline">\(\alpha\)</span>.</li>
-<li class="fragment">El complemento <span class="math inline">\(1 - \beta\)</span> se conoce como la potencia de la prueba.</li>
+<li class="fragment">Error Tipo II: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mrow><mo stretchy="true" form="prefix">(</mo><mrow><mtext mathvariant="normal">no rechazar </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>H</mi><mn>0</mn></msub><mi>/</mi><msub><mi>H</mi><mn>0</mn></msub><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> es falsa</mtext></mrow><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P(\text{no rechazar }H_0/H_0 \text{ es falsa})</annotation></semantics></math></li>
+<li class="fragment">Se denota <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math> al Error Tipo II en una prueba de hipótesis teniendo en cuenta el nivel de significancia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>.</li>
+<li class="fragment">El complemento <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>−</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">1 - \beta</annotation></semantics></math> se conoce como la potencia de la prueba.</li>
 <li class="fragment"><strong>Potencia</strong>: Es la probabilidad de que la prueba rechace correctamente la hipótesis nula.</li>
 </ul>
 </div>
@@ -1463,7 +1544,7 @@ margin-right: 0; }
 <p><strong>Entonces, ¿qué es el Error de Tipo I?</strong></p>
 </div>
 <div class="callout-content">
-<p>Rechazar la hipótesis nula (<span class="math inline">\(H_0\)</span>) cuando en realidad esta es verdadera.</p>
+<p>Rechazar la hipótesis nula (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>) cuando en realidad esta es verdadera.</p>
 </div>
 </div>
 </div>
@@ -1477,7 +1558,7 @@ margin-right: 0; }
 <p><strong>Entonces, ¿qué es el Error de Tipo II?</strong></p>
 </div>
 <div class="callout-content">
-<p>Aceptar la hipótesis nula (<span class="math inline">\(H_0\)</span>) cuando en realidad esta era falsa.</p>
+<p>No rechazar la hipótesis nula (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>) cuando en realidad esta era falsa.</p>
 </div>
 </div>
 </div>
@@ -1496,24 +1577,24 @@ margin-right: 0; }
 </section>
 <section id="prueba-de-hipótesis-criterio-de-decisión" class="slide level2">
 <h2>Prueba de hipótesis: Criterio de decisión</h2>
-<p>Supongamos que queremos determinar si el promedio de la asignatura de Métodos Cuantitativos de los alumnos de la UST es igual a <span class="math inline">\(55\)</span>.</p>
+<p>Supongamos que queremos determinar si el promedio de la asignatura de Métodos Cuantitativos de los alumnos de la UST es igual a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>55</mn><annotation encoding="application/x-tex">55</annotation></semantics></math>.</p>
 <div>
 <ul>
 <li class="fragment">Para realizar la prueba de hipótesis, formulamos las siguientes inferencias respecto a la población:
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: \mu = 55\)</span></li>
-<li class="fragment"><span class="math inline">\(H_1: \mu \neq 55\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>=</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_0: \mu = 55</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mi>μ</mi><mo>≠</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_1: \mu \neq 55</annotation></semantics></math></li>
 </ul></li>
-<li class="fragment">Con los datos muestrales disponibles, podemos decidir si rechazamos o no rechazamos <span class="math inline">\(H_0\)</span>.</li>
+<li class="fragment">Con los datos muestrales disponibles, podemos decidir si rechazamos o no rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
 </ul>
 </div>
 </section>
 <section id="prueba-de-hipótesis-criterio-de-decisión-1" class="slide level2">
 <h2>Prueba de hipótesis: Criterio de decisión</h2>
-<p>Supongamos que al calcular la media muestral del curso, obtenemos una nota de <span class="math inline">\(56\)</span>.</p>
+<p>Supongamos que al calcular la media muestral del curso, obtenemos una nota de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>56</mn><annotation encoding="application/x-tex">56</annotation></semantics></math>.</p>
 <div>
 <ul>
-<li class="fragment">¿Se puede concluir que la media poblacional no es <span class="math inline">\(55\)</span>?</li>
+<li class="fragment">¿Se puede concluir que la media poblacional no es <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>55</mn><annotation encoding="application/x-tex">55</annotation></semantics></math>?</li>
 <li class="fragment"><strong>Probablemente no</strong>. Esta diferencia podría deberse a un error de muestreo.</li>
 <li class="fragment">En este caso, la diferencia se consideraría <em>estadísticamente insignificante</em>. El desafío radica en determinar qué tan grande debe ser una diferencia para considerarla estadísticamente significativa.</li>
 </ul>
@@ -1539,7 +1620,7 @@ margin-right: 0; }
 <div>
 <ul>
 <li class="fragment">Recordando las distribuciones, podemos aplicar la fórmula Z para el caso muestral:</li>
-<li class="fragment"><span class="math inline">\(Z = \frac{\overline{X} - \mu}{\frac{\sigma}{\sqrt{n}}}\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mfrac><mrow><mover><mi>X</mi><mo accent="true">¯</mo></mover><mo>−</mo><mi>μ</mi></mrow><mfrac><mi>σ</mi><msqrt><mi>n</mi></msqrt></mfrac></mfrac></mrow><annotation encoding="application/x-tex">Z = \frac{\overline{X} - \mu}{\frac{\sigma}{\sqrt{n}}}</annotation></semantics></math></li>
 <li class="fragment">Si la varianza poblacional es desconocida, podemos utilizar la varianza muestral.</li>
 <li class="fragment">La regla empírica indica que el 95% de las veces la media muestral esta a <strong>1.96 desviaciones de la media poblacional</strong>.</li>
 </ul>
@@ -1667,10 +1748,10 @@ margin-right: 0; }
 <h2>Prueba de hipótesis: Valor crítico</h2>
 <div>
 <ul>
-<li class="fragment">Valores críticos de <span class="math inline">\(Z\pm1.96\)</span> permiten establecer una regla de decisión que diga si se rechaza la hipótesis nula o no:
+<li class="fragment">Valores críticos de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>±</mo><mn>1.96</mn></mrow><annotation encoding="application/x-tex">Z\pm1.96</annotation></semantics></math> permiten establecer una regla de decisión que diga si se rechaza la hipótesis nula o no:
 <ul>
-<li class="fragment">No se rechaza <span class="math inline">\(H_0\)</span> si los valores <span class="math inline">\(Z\)</span> están entre <span class="math inline">\(\pm1.96\)</span>.</li>
-<li class="fragment">Se rechaza <span class="math inline">\(H_0\)</span> si el valor de <span class="math inline">\(Z\)</span> es menor que <span class="math inline">\(-1.96\)</span> o mayor que <span class="math inline">\(1.96\)</span>.</li>
+<li class="fragment">No se rechaza <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> si los valores <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> están entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>1.96</mn></mrow><annotation encoding="application/x-tex">\pm1.96</annotation></semantics></math>.</li>
+<li class="fragment">Se rechaza <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> si el valor de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> es menor que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1.96</mn></mrow><annotation encoding="application/x-tex">-1.96</annotation></semantics></math> o mayor que <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.96</mn><annotation encoding="application/x-tex">1.96</annotation></semantics></math>.</li>
 </ul></li>
 </ul>
 </div>
@@ -1681,14 +1762,14 @@ margin-right: 0; }
 <ul>
 <li class="fragment">Retomando el ejemplo del promedio de la asignatura en la UST:
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: \mu = 55\)</span></li>
-<li class="fragment"><span class="math inline">\(H_1: \mu \neq 55\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>=</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_0: \mu = 55</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mi>μ</mi><mo>≠</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_1: \mu \neq 55</annotation></semantics></math></li>
 </ul></li>
 <li class="fragment">Ahora, supongamos que después de recolectar los datos, obtenemos los siguientes resultados:
 <ul>
-<li class="fragment">Media muestral <span class="math inline">\((\overline{X}): 56\)</span></li>
-<li class="fragment">Desv. estándar de la población <span class="math inline">\((\sigma): 3\)</span> (suponiendo que es conocida)</li>
-<li class="fragment">Tamaño de la muestra <span class="math inline">\((n): 30\)</span></li>
+<li class="fragment">Media muestral <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mover><mi>X</mi><mo accent="true">¯</mo></mover><mo stretchy="true" form="postfix">)</mo></mrow><mo>:</mo><mn>56</mn></mrow><annotation encoding="application/x-tex">(\overline{X}): 56</annotation></semantics></math></li>
+<li class="fragment">Desv. estándar de la población <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>σ</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>:</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">(\sigma): 3</annotation></semantics></math> (suponiendo que es conocida)</li>
+<li class="fragment">Tamaño de la muestra <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mi>n</mi><mo stretchy="true" form="postfix">)</mo></mrow><mo>:</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">(n): 30</annotation></semantics></math></li>
 </ul></li>
 </ul>
 </div>
@@ -1699,13 +1780,13 @@ margin-right: 0; }
 <ul>
 <li class="fragment">Primero, calculamos el error estándar de la media (la desviación estándar de la distribución muestral):
 <ul>
-<li class="fragment">Error estándar <span class="math inline">\(= \frac{\sigma}{\sqrt{n}} = \frac{3}{\sqrt{30}} \approx 0.5477\)</span></li>
+<li class="fragment">Error estándar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>=</mo><mfrac><mi>σ</mi><msqrt><mi>n</mi></msqrt></mfrac><mo>=</mo><mfrac><mn>3</mn><msqrt><mn>30</mn></msqrt></mfrac><mo>≈</mo><mn>0.5477</mn></mrow><annotation encoding="application/x-tex">= \frac{\sigma}{\sqrt{n}} = \frac{3}{\sqrt{30}} \approx 0.5477</annotation></semantics></math></li>
 </ul></li>
-<li class="fragment">Luego calculamos el puntaje <span class="math inline">\(Z\)</span>:
+<li class="fragment">Luego calculamos el puntaje <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math>:
 <ul>
-<li class="fragment"><span class="math inline">\(Z = \frac{56-55}{0.5477} \approx 1.825\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mfrac><mrow><mn>56</mn><mo>−</mo><mn>55</mn></mrow><mn>0.5477</mn></mfrac><mo>≈</mo><mn>1.825</mn></mrow><annotation encoding="application/x-tex">Z = \frac{56-55}{0.5477} \approx 1.825</annotation></semantics></math></li>
 </ul></li>
-<li class="fragment">Ahora, comparamos este valor <span class="math inline">\(Z\)</span> con los valores críticos para un nivel de significancia (<span class="math inline">\(\alpha\)</span>) del 5% (nivel de confianza del 95%). Para una prueba de dos colas, los valores críticos son <span class="math inline">\(\pm1.96\)</span>.</li>
+<li class="fragment">Ahora, comparamos este valor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> con los valores críticos para un nivel de significancia (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>) del 5% (nivel de confianza del 95%). Para una prueba de dos colas, los valores críticos son <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>1.96</mn></mrow><annotation encoding="application/x-tex">\pm1.96</annotation></semantics></math>.</li>
 </ul>
 </div>
 </section>
@@ -1715,10 +1796,10 @@ margin-right: 0; }
 <ul>
 <li class="fragment">La regla empírica y los valores críticos nos indican que:
 <ul>
-<li class="fragment">Si el valor <span class="math inline">\(Z\)</span> calculado está entre <span class="math inline">\(-1.96\)</span> y <span class="math inline">\(1.96\)</span>, no rechazamos <span class="math inline">\(H_0\)</span>.</li>
-<li class="fragment">Si el valor <span class="math inline">\(Z\)</span> calculado está fuera de este rango, rechazamos <span class="math inline">\(H_0\)</span>.</li>
+<li class="fragment">Si el valor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> calculado está entre <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1.96</mn></mrow><annotation encoding="application/x-tex">-1.96</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.96</mn><annotation encoding="application/x-tex">1.96</annotation></semantics></math>, no rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
+<li class="fragment">Si el valor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> calculado está fuera de este rango, rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
 </ul></li>
-<li class="fragment">En nuestro ejemplo, el valor <span class="math inline">\(Z\)</span> es <span class="math inline">\(1.825\)</span>, que está dentro del rango de <span class="math inline">\(-1.96\)</span> y <span class="math inline">\(1.96\)</span>. Por lo tanto, <strong>fallamos en rechazar <span class="math inline">\(H_0\)</span>.</strong></li>
+<li class="fragment">En nuestro ejemplo, el valor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> es <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.825</mn><annotation encoding="application/x-tex">1.825</annotation></semantics></math>, que está dentro del rango de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1.96</mn></mrow><annotation encoding="application/x-tex">-1.96</annotation></semantics></math> y <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.96</mn><annotation encoding="application/x-tex">1.96</annotation></semantics></math>. Por lo tanto, <strong>fallamos en rechazar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</strong></li>
 </ul>
 </div>
 </section>
@@ -1784,7 +1865,7 @@ margin-right: 0; }
 </section>
 <section id="prueba-de-hipótesis-prueba-de-una-cola-1" class="slide level2">
 <h2>Prueba de hipótesis: Prueba de una cola</h2>
-<p><span class="math display">\[H_0: \mu \leq 55 \text{ vs } H_1: \mu  \gt 55\]</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>≤</mo><mn>55</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> vs </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mi>μ</mi><mo>&gt;</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_0: \mu \leq 55 \text{ vs } H_1: \mu  \gt 55</annotation></semantics></math></p>
 <div class="fragment">
 <center>
 <div id="0e70cc1b" class="cell" data-execution_count="5">
@@ -1839,7 +1920,7 @@ margin-right: 0; }
 </section>
 <section id="prueba-de-hipótesis-prueba-de-una-cola-2" class="slide level2">
 <h2>Prueba de hipótesis: Prueba de una cola</h2>
-<p><span class="math display">\[H_0: \mu \geq 55 \text{ vs } H_1: \mu \lt 55\]</span></p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>≥</mo><mn>55</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> vs </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mi>μ</mi><mo>&lt;</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_0: \mu \geq 55 \text{ vs } H_1: \mu \lt 55</annotation></semantics></math></p>
 <div class="fragment">
 <center>
 <div id="8d2723e6" class="cell" data-execution_count="6">
@@ -1893,12 +1974,12 @@ margin-right: 0; }
 <h2>Prueba de hipótesis: Prueba de una cola</h2>
 <div>
 <ul>
-<li class="fragment">Volviendo al ejemplo de las notas del curso, en lugar de preguntarnos si el promedio de la asignatura es igual a <span class="math inline">\(55\)</span>, podemos plantear la hipótesis nula que el promedio sea <strong>“al menos 55”</strong>, versus un promedio mayor a <span class="math inline">\(55\)</span>.
+<li class="fragment">Volviendo al ejemplo de las notas del curso, en lugar de preguntarnos si el promedio de la asignatura es igual a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>55</mn><annotation encoding="application/x-tex">55</annotation></semantics></math>, podemos plantear la hipótesis nula que el promedio sea <strong>“al menos 55”</strong>, versus un promedio mayor a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>55</mn><annotation encoding="application/x-tex">55</annotation></semantics></math>.
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: \mu \leq 55\)</span></li>
-<li class="fragment"><span class="math inline">\(H_1: \mu \gt 55\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>≤</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_0: \mu \leq 55</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mi>μ</mi><mo>&gt;</mo><mn>55</mn></mrow><annotation encoding="application/x-tex">H_1: \mu \gt 55</annotation></semantics></math></li>
 </ul></li>
-<li class="fragment">En este caso sólo los valores significativamente por arriba pueden ser causa del rechazo de la <span class="math inline">\(H_0\)</span>. Ahora si considera el <span class="math inline">\(5\%\)</span> superior como zona de rechazo.</li>
+<li class="fragment">En este caso sólo los valores significativamente por arriba pueden ser causa del rechazo de la <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>. Ahora si considera el <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">5\%</annotation></semantics></math> superior como zona de rechazo.</li>
 </ul>
 </div>
 </section>
@@ -1906,10 +1987,10 @@ margin-right: 0; }
 <h2>Prueba de hipótesis: Prueba de una cola</h2>
 <div>
 <ul>
-<li class="fragment"><span class="math inline">\(Z = \frac{56-55}{\frac{3}{\sqrt{30}}} \approx 1.825\)</span></li>
-<li class="fragment">Para un nivel de significancia de <span class="math inline">\(\alpha\)</span> = 0.05 en una cola derecha, el valor crítico de <span class="math inline">\(Z\)</span> es aproximadamente <span class="math inline">\(1.645\)</span>.</li>
-<li class="fragment">Como <span class="math inline">\(Z \approx 1.825\)</span> es mayor <span class="math inline">\(1.645\)</span>, rechazamos <span class="math inline">\(H_0\)</span>.</li>
-<li class="fragment">Con un nivel de significancia del 5%, tenemos suficiente evidencia para rechazar <span class="math inline">\(H_0\)</span> y concluir que el promedio de la asignatura es significativamente mayor a <span class="math inline">\(55\)</span>.</li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mfrac><mrow><mn>56</mn><mo>−</mo><mn>55</mn></mrow><mfrac><mn>3</mn><msqrt><mn>30</mn></msqrt></mfrac></mfrac><mo>≈</mo><mn>1.825</mn></mrow><annotation encoding="application/x-tex">Z = \frac{56-55}{\frac{3}{\sqrt{30}}} \approx 1.825</annotation></semantics></math></li>
+<li class="fragment">Para un nivel de significancia de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> = 0.05 en una cola derecha, el valor crítico de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math> es aproximadamente <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.645</mn><annotation encoding="application/x-tex">1.645</annotation></semantics></math>.</li>
+<li class="fragment">Como <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>≈</mo><mn>1.825</mn></mrow><annotation encoding="application/x-tex">Z \approx 1.825</annotation></semantics></math> es mayor <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.645</mn><annotation encoding="application/x-tex">1.645</annotation></semantics></math>, rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
+<li class="fragment">Con un nivel de significancia del 5%, tenemos suficiente evidencia para rechazar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> y concluir que el promedio de la asignatura es significativamente mayor a <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>55</mn><annotation encoding="application/x-tex">55</annotation></semantics></math>.</li>
 </ul>
 </div>
 </section>
@@ -1919,8 +2000,8 @@ margin-right: 0; }
 <ul>
 <li class="fragment">La diferencia en los resultados se debe a la posición y el tamaño de las zonas de rechazo en las dos pruebas:
 <ul>
-<li class="fragment">En la prueba de dos colas, el área total de <span class="math inline">\(\alpha\)</span> se divide entre las dos colas, lo que hace que los valores críticos sean más extremos (<span class="math inline">\(\pm1.96\)</span>)</li>
-<li class="fragment">En la prueba de una cola, todo el <span class="math inline">\(\alpha\)</span> se concentra en una cola, haciendo que el valor crítico sea menos extremo (<span class="math inline">\(1.645\)</span>).</li>
+<li class="fragment">En la prueba de dos colas, el área total de <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> se divide entre las dos colas, lo que hace que los valores críticos sean más extremos (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>1.96</mn></mrow><annotation encoding="application/x-tex">\pm1.96</annotation></semantics></math>)</li>
+<li class="fragment">En la prueba de una cola, todo el <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> se concentra en una cola, haciendo que el valor crítico sea menos extremo (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1.645</mn><annotation encoding="application/x-tex">1.645</annotation></semantics></math>).</li>
 </ul></li>
 </ul>
 </div>
@@ -1929,7 +2010,7 @@ margin-right: 0; }
 <h2>Prueba de hipótesis: Diferencias en resultados</h2>
 <div>
 <ul>
-<li class="fragment">Por lo tanto, una media muestral que no sea suficientemente extrema para rechazar <span class="math inline">\(H_0\)</span> en una prueba de dos colas puede ser suficiente para rechazar <span class="math inline">\(H_0\)</span> en una prueba de una cola debido a la diferencia en los valores críticos.</li>
+<li class="fragment">Por lo tanto, una media muestral que no sea suficientemente extrema para rechazar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> en una prueba de dos colas puede ser suficiente para rechazar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math> en una prueba de una cola debido a la diferencia en los valores críticos.</li>
 </ul>
 </div>
 </section>
@@ -1961,7 +2042,7 @@ margin-right: 0; }
 <h2>Prueba de hipótesis: Valor-p</h2>
 <div>
 <ul>
-<li class="fragment">El valor-p es la probabilidad de obtener un resultado tan extremo como el observado, o más extremo, bajo la suposición de que la hipótesis nula (<span class="math inline">\(H_0\)</span>) es verdadera.</li>
+<li class="fragment">El valor-p es la probabilidad de obtener un resultado tan extremo como el observado, o más extremo, bajo la suposición de que la hipótesis nula (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>) es verdadera.</li>
 <li class="fragment">El <strong>valor-p nos ayuda a determinar la significancia de nuestros resultados sin depender de un valor crítico específico</strong>.</li>
 </ul>
 </div>
@@ -1971,8 +2052,8 @@ margin-right: 0; }
 <h3 id="cómo-interpretar-el-valor-p"><strong>¿Cómo interpretar el valor-p?</strong></h3>
 <div>
 <ul>
-<li class="fragment"><strong>Valor-p pequeño (por ejemplo, menor que un nivel de significancia, como <span class="math inline">\(\alpha = 0.05\)</span>)</strong>: Indica que los resultados observados son poco probables bajo la suposición de que la hipótesis nula (<span class="math inline">\(H_0\)</span>) es verdadera. Esto sugiere que hay suficiente evidencia para considerar rechazar <span class="math inline">\(H_0\)</span>.</li>
-<li class="fragment"><strong>Valor-p grande (por ejemplo, mayor que el nivel de significancia <span class="math inline">\(\alpha = 0.05\)</span>)</strong>: Indica que los resultados observados son consistentes con la hipótesis nula (<span class="math inline">\(H_0\)</span>). Esto sugiere que no hay suficiente evidencia en los datos para rechazar <span class="math inline">\(H_0\)</span>.</li>
+<li class="fragment"><strong>Valor-p pequeño (por ejemplo, menor que un nivel de significancia, como <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\alpha = 0.05</annotation></semantics></math>)</strong>: Indica que los resultados observados son poco probables bajo la suposición de que la hipótesis nula (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>) es verdadera. Esto sugiere que hay suficiente evidencia para considerar rechazar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
+<li class="fragment"><strong>Valor-p grande (por ejemplo, mayor que el nivel de significancia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\alpha = 0.05</annotation></semantics></math>)</strong>: Indica que los resultados observados son consistentes con la hipótesis nula (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>). Esto sugiere que no hay suficiente evidencia en los datos para rechazar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
 </ul>
 </div>
 </section>
@@ -1980,10 +2061,10 @@ margin-right: 0; }
 <h2>Prueba de hipótesis: Valor-p</h2>
 <div>
 <ul>
-<li class="fragment">En una prueba de hipótesis, comparamos el valor-p con un umbral de significancia (<span class="math inline">\(\alpha\)</span>) para tomar una decisión:
+<li class="fragment">En una prueba de hipótesis, comparamos el valor-p con un umbral de significancia (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>) para tomar una decisión:
 <ul>
-<li class="fragment">Si el valor-p <span class="math inline">\(\leq \alpha\)</span>, rechazamos <span class="math inline">\(H_0\)</span>.</li>
-<li class="fragment">Si el valor-p <span class="math inline">\(\gt \alpha\)</span>, no rechazamos <span class="math inline">\(H_0\)</span>.</li>
+<li class="fragment">Si el valor-p <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\leq \alpha</annotation></semantics></math>, rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
+<li class="fragment">Si el valor-p <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\gt \alpha</annotation></semantics></math>, no rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
 </ul></li>
 </ul>
 </div>
@@ -2100,8 +2181,8 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <h2>Valor-p</h2>
 <p><strong>¡No olvidar!</strong></p>
 <ul>
-<li>Si el valor-p <span class="math inline">\(\leq \alpha\)</span>, rechazamos <span class="math inline">\(H_0\)</span>.</li>
-<li>Si el valor-p <span class="math inline">\(\gt \alpha\)</span>, no rechazamos <span class="math inline">\(H_0\)</span>.</li>
+<li>Si el valor-p <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\leq \alpha</annotation></semantics></math>, rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
+<li>Si el valor-p <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo><mi>α</mi></mrow><annotation encoding="application/x-tex">\gt \alpha</annotation></semantics></math>, no rechazamos <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
 </ul>
 <div class="fragment">
 <div class="quarto-figure quarto-figure-center">
@@ -2128,79 +2209,79 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\mu\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\overline{X}\)</span></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>X</mi><mo accent="true">¯</mo></mover><annotation encoding="application/x-tex">\overline{X}</annotation></semantics></math></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><span class="math inline">\(P\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(\hat{P}\)</span></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>P</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{P}</annotation></semantics></math></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><span class="math inline">\(\sigma\)</span></td>
-<td style="text-align: center;"><span class="math inline">\(S\)</span></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></td>
+<td style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math></td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="prueba-de-hipótesis-media-poblacional-mu" class="slide level2">
-<h2>Prueba de hipótesis: media poblacional <span class="math inline">\(\mu\)</span></h2>
+<h2>Prueba de hipótesis: media poblacional <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math></h2>
 <div>
 <ul>
 <li class="fragment">Hipótesis:
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: \mu = \mu_0\)</span></li>
-<li class="fragment"><span class="math inline">\(H_1:\)</span>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>=</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0: \mu = \mu_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo></mrow><annotation encoding="application/x-tex">H_1:</annotation></semantics></math>
 <ul>
-<li class="fragment"><span class="math inline">\(\mu \neq \mu_0\)</span></li>
-<li class="fragment"><span class="math inline">\(\mu \lt \mu_0\)</span></li>
-<li class="fragment"><span class="math inline">\(\mu \gt \mu_0\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>≠</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mu \neq \mu_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>&lt;</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mu \lt \mu_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>&gt;</mo><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mu \gt \mu_0</annotation></semantics></math></li>
 </ul></li>
 </ul></li>
 <li class="fragment">Recolectar datos:
 <ul>
-<li class="fragment"><span class="math inline">\(\alpha, n, \overline{X}, S \text{ (o } \sigma \text{ si se conoce)}\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>n</mi><mo>,</mo><mover><mi>X</mi><mo accent="true">¯</mo></mover><mo>,</mo><mi>S</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> (o </mtext><mspace width="0.333em"></mspace></mrow><mi>σ</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> si se conoce)</mtext></mrow></mrow><annotation encoding="application/x-tex">\alpha, n, \overline{X}, S \text{ (o } \sigma \text{ si se conoce)}</annotation></semantics></math></li>
 </ul></li>
 </ul>
 </div>
 </section>
-<section id="prueba-de-hipótesis-media-proporción-p" class="slide level2">
-<h2>Prueba de hipótesis: media proporción <span class="math inline">\(P\)</span></h2>
+<section id="prueba-de-hipótesis-proporción-poblacional-p" class="slide level2">
+<h2>Prueba de hipótesis: proporción poblacional <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math></h2>
 <div>
 <ul>
 <li class="fragment">Hipótesis:
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: P = P_0\)</span></li>
-<li class="fragment"><span class="math inline">\(H_1:\)</span>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>p</mi><mo>=</mo><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_0: p = p_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo></mrow><annotation encoding="application/x-tex">H_1:</annotation></semantics></math>
 <ul>
-<li class="fragment"><span class="math inline">\(P \neq P_0\)</span></li>
-<li class="fragment"><span class="math inline">\(P \lt P_0\)</span></li>
-<li class="fragment"><span class="math inline">\(P\gt P_0\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>≠</mo><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">p \neq p_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&lt;</mo><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">p \lt p_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>&gt;</mo><msub><mi>p</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">p \gt p_0</annotation></semantics></math></li>
 </ul></li>
 </ul></li>
 <li class="fragment">Recolectar datos:
 <ul>
-<li class="fragment"><span class="math inline">\(\alpha, n, \hat{p}\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>n</mi><mo>,</mo><mover><mi>p</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\alpha, n, \hat{p}</annotation></semantics></math></li>
 </ul></li>
 </ul>
 </div>
 </section>
 <section id="prueba-de-hipótesis-varianza-poblacional-sigma2" class="slide level2">
-<h2>Prueba de hipótesis: varianza poblacional <span class="math inline">\(\sigma^2\)</span></h2>
+<h2>Prueba de hipótesis: varianza poblacional <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>σ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\sigma^2</annotation></semantics></math></h2>
 <div>
 <ul>
 <li class="fragment">Hipótesis:
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: \sigma^2 = \sigma^2_0\)</span></li>
-<li class="fragment"><span class="math inline">\(H_1:\)</span>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><msup><mi>σ</mi><mn>2</mn></msup><mo>=</mo><msubsup><mi>σ</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">H_0: \sigma^2 = \sigma^2_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo></mrow><annotation encoding="application/x-tex">H_1:</annotation></semantics></math>
 <ul>
-<li class="fragment"><span class="math inline">\(\sigma^2 \neq \sigma^2_0\)</span></li>
-<li class="fragment"><span class="math inline">\(\sigma^2 \lt \sigma^2_0\)</span></li>
-<li class="fragment"><span class="math inline">\(\sigma^2 \gt \sigma^2_0\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>≠</mo><msubsup><mi>σ</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma^2 \neq \sigma^2_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>&lt;</mo><msubsup><mi>σ</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma^2 \lt \sigma^2_0</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>σ</mi><mn>2</mn></msup><mo>&gt;</mo><msubsup><mi>σ</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\sigma^2 \gt \sigma^2_0</annotation></semantics></math></li>
 </ul></li>
 </ul></li>
 <li class="fragment">Recolectar datos:
 <ul>
-<li class="fragment"><span class="math inline">\(\alpha, n, S^2\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>n</mi><mo>,</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\alpha, n, S^2</annotation></semantics></math></li>
 </ul></li>
 </ul>
 </div>
@@ -2262,14 +2343,14 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <li class="fragment">Hipótesis:</li>
 </ol>
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: \mu = 75\)</span></li>
-<li class="fragment"><span class="math inline">\(H_0: \mu \neq 75\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>=</mo><mn>75</mn></mrow><annotation encoding="application/x-tex">H_0: \mu = 75</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>≠</mo><mn>75</mn></mrow><annotation encoding="application/x-tex">H_0: \mu \neq 75</annotation></semantics></math></li>
 </ul>
 <ol start="2" type="1">
 <li class="fragment">Recopilar los datos y calcular la media y la desviación estándar de la muestra.</li>
 <li class="fragment">Calcular el valor t.</li>
 <li class="fragment">Calcular el valor p utilizando el valor t y la distribución t de Student.</li>
-<li class="fragment">Comparar el valor p con el nivel de significancia (<span class="math inline">\(\alpha\)</span>)</li>
+<li class="fragment">Comparar el valor p con el nivel de significancia (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>)</li>
 </ol>
 </div>
 </section>
@@ -2281,7 +2362,7 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <div>
 <ul>
 <li class="fragment">El test Z es una prueba estadística que se utiliza para comparar la media de una muestra con la media de una población <strong>cuando la desviación estándar de la población es conocida</strong>, o para comparar las medias de dos muestras grandes.</li>
-<li class="fragment">Se usa principalmente cuando las muestras son grandes (<span class="math inline">\(n \gt 30\)</span>) y las distribuciones de los datos son aproximadamente normales.</li>
+<li class="fragment">Se usa principalmente cuando las muestras son grandes (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&gt;</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">n \gt 30</annotation></semantics></math>) y las distribuciones de los datos son aproximadamente normales.</li>
 </ul>
 </div>
 </section>
@@ -2318,14 +2399,14 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <li class="fragment">Hipótesis:</li>
 </ol>
 <ul>
-<li class="fragment"><span class="math inline">\(H_0: \mu = 175\)</span></li>
-<li class="fragment"><span class="math inline">\(H_0: \mu \neq 175\)</span></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>=</mo><mn>175</mn></mrow><annotation encoding="application/x-tex">H_0: \mu = 175</annotation></semantics></math></li>
+<li class="fragment"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mi>μ</mi><mo>≠</mo><mn>175</mn></mrow><annotation encoding="application/x-tex">H_0: \mu \neq 175</annotation></semantics></math></li>
 </ul>
 <ol start="2" type="1">
 <li class="fragment">Recopilar los datos y calcular la media de la muestra.</li>
 <li class="fragment">Calcular el valor Z.</li>
 <li class="fragment">Calcular el valor p utilizando el valor Z y la distribución normal estándar.</li>
-<li class="fragment">Comparar el valor p con el nivel de significancia (<span class="math inline">\(\alpha\)</span>)</li>
+<li class="fragment">Comparar el valor p con el nivel de significancia (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>)</li>
 </ol>
 </div>
 </section>
@@ -2371,14 +2452,14 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <li><strong>Hipótesis</strong>:</li>
 </ol>
 <ul>
-<li><span class="math inline">\(H_0\)</span>: El hábito de fumar y el resultado de la prueba de salud son independientes.</li>
-<li><span class="math inline">\(H_1\)</span>: El hábito de fumar y el resultado de la prueba de salud no son independientes.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>: El hábito de fumar y el resultado de la prueba de salud son independientes.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>: El hábito de fumar y el resultado de la prueba de salud no son independientes.</li>
 </ul>
 <ol start="2" type="1">
 <li>Recopilar los datos y organizar en una tabla de contingencia.</li>
-<li>Calcular el estadístico Chi-cuadrado (<span class="math inline">\(\chi^2\)</span>)</li>
+<li>Calcular el estadístico Chi-cuadrado (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>χ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\chi^2</annotation></semantics></math>)</li>
 <li>Calcular el valor p</li>
-<li>Comparar el valor p con el nivel de significancia (<span class="math inline">\(\alpha\)</span>).</li>
+<li>Comparar el valor p con el nivel de significancia (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>).</li>
 </ol>
 </section>
 <section id="prueba-shapiro-wilk" class="slide level2 center">
@@ -2414,20 +2495,20 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <li>Hipótesis:</li>
 </ol>
 <ul>
-<li><span class="math inline">\(H_0\)</span>: Los datos siguen una distribución normal.</li>
-<li><span class="math inline">\(H_1\)</span>: Los datos no siguen una distribución normal.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>: Los datos siguen una distribución normal.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>1</mn></msub><annotation encoding="application/x-tex">H_1</annotation></semantics></math>: Los datos no siguen una distribución normal.</li>
 </ul>
 <ol start="2" type="1">
 <li>Recopilar los datos y observar la distribución.</li>
 <li>Calcular el estadístico de Shapiro-Wilk y el valor-p asociado.</li>
-<li>Comparar el valor-p con el nivel de significancia (<span class="math inline">\(\alpha\)</span>).</li>
+<li>Comparar el valor-p con el nivel de significancia (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>).</li>
 </ol>
 </section>
 <section id="prueba-shapiro-wilk-interpretación" class="slide level2">
 <h2>Prueba Shapiro-Wilk: Interpretación</h2>
 <ul>
-<li>Si el valor p <span class="math inline">\(\leq 0.05\)</span>, se rechaza la hipótesis nula (<span class="math inline">\(H_0\)</span>), lo que indica que los datos no se ajustan a una distribución normal.</li>
-<li>Si el valor p <span class="math inline">\(\gt 0.05\)</span>, no hay evidencia suficiente para rechazar la hipótesis nula, lo que sugiere que los datos pueden considerarse normalmente distribuidos.</li>
+<li>Si el valor p <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\leq 0.05</annotation></semantics></math>, se rechaza la hipótesis nula (<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>), lo que indica que los datos no se ajustan a una distribución normal.</li>
+<li>Si el valor p <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&gt;</mo><mn>0.05</mn></mrow><annotation encoding="application/x-tex">\gt 0.05</annotation></semantics></math>, no hay evidencia suficiente para rechazar la hipótesis nula, lo que sugiere que los datos pueden considerarse normalmente distribuidos.</li>
 </ul>
 </section>
 <section id="resumen" class="slide level2 center">
@@ -2439,9 +2520,9 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <ol type="1">
 <li>Establecer las hipótesis.</li>
 <li>Aplicar el test.</li>
-<li>Determinar el nivel de significancia <span class="math inline">\(\alpha\)</span> (generalmente se usa 5%).</li>
+<li>Determinar el nivel de significancia <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math> (generalmente se usa 5%).</li>
 <li>Comparar el valor-p del test con el nivel de significancia.</li>
-<li>Rechazar o no rechazar <span class="math inline">\(H_0\)</span>.</li>
+<li>Rechazar o no rechazar <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>0</mn></msub><annotation encoding="application/x-tex">H_0</annotation></semantics></math>.</li>
 </ol>
 </section>
 <section id="resumen-2" class="slide level2">
@@ -2456,12 +2537,6 @@ Con una significancia de 0.05 y un valor-p = 0.94 -&gt; No rechazamos la hipóte
 <ul>
 <li><strong>Prueba Chi-cuadrado</strong>: Determinar si existe una diferencia significativa entre las frecuencias observadas y las frecuencias esperadas en una o más categorías.</li>
 <li><strong>Prueba Shapiro-Wilk</strong>: Determinar si un conjunto de datos se distribuye de manera normal.</li>
-</ul>
-</section>
-<section id="bibliografía-recomendada" class="slide level2">
-<h2>Bibliografía recomendada</h2>
-<ul>
-<li>Estadística, Capítulo 8, Triola Mario F, 2018 12a edición.</li>
 </ul>
 
 </section></section>
@@ -3432,8 +3507,6 @@ window.QuartoSupport = function () {
 	 * Copyright (C) 2011-2014 Hakim El Hattab, http://hakim.se
 	 */return()=>e}));
 </script>
-  <script>!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?module.exports=e():"function"==typeof define&&define.amd?define(e):(t="undefined"!=typeof globalThis?globalThis:t||self).RevealMath=e()}(this,(function(){"use strict";const t=()=>{let t,e={messageStyle:"none",tex2jax:{inlineMath:[["$","$"],["\\(","\\)"]],skipTags:["script","noscript","style","textarea","pre"]},skipStartupTypeset:!0};return{id:"mathjax2",init:function(n){t=n;let a=t.getConfig().mathjax2||t.getConfig().math||{},i={...e,...a},s=(i.mathjax||"https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js")+"?config="+(i.config||"TeX-AMS_HTML-full");i.tex2jax={...e.tex2jax,...a.tex2jax},i.mathjax=i.config=null,function(t,e){let n=document.querySelector("head"),a=document.createElement("script");a.type="text/javascript",a.src=t;let i=()=>{"function"==typeof e&&(e.call(),e=null)};a.onload=i,a.onreadystatechange=()=>{"loaded"===this.readyState&&i()},n.appendChild(a)}(s,(function(){MathJax.Hub.Config(i),MathJax.Hub.Queue(["Typeset",MathJax.Hub,t.getRevealElement()]),MathJax.Hub.Queue(t.layout),t.on("slidechanged",(function(t){MathJax.Hub.Queue(["Typeset",MathJax.Hub,t.currentSlide])}))}))}}},e=t;return Plugin=Object.assign(e(),{KaTeX:()=>{let t,e={version:"latest",delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}],ignoredTags:["script","noscript","style","textarea","pre"]};const n=t=>new Promise(((e,n)=>{const a=document.createElement("script");a.type="text/javascript",a.onload=e,a.onerror=n,a.src=t,document.head.append(a)}));return{id:"katex",init:function(a){t=a;let i=t.getConfig().katex||{},s={...e,...i};const{local:o,version:l,extensions:r,...c}=s;let d=s.local||"https://cdn.jsdelivr.net/npm/katex",u=s.local?"":"@"+s.version,p=d+u+"/dist/katex.min.css",h=d+u+"/dist/contrib/mhchem.min.js",x=d+u+"/dist/contrib/auto-render.min.js",m=[d+u+"/dist/katex.min.js"];s.extensions&&s.extensions.includes("mhchem")&&m.push(h),m.push(x);const f=()=>{renderMathInElement(a.getSlidesElement(),c),t.layout()};(t=>{let e=document.createElement("link");e.rel="stylesheet",e.href=t,document.head.appendChild(e)})(p),async function(t){for(const e of t)await n(e)}(m).then((()=>{t.isReady()?f():t.on("ready",f.bind(this))}))}}},MathJax2:t,MathJax3:()=>{let t,e={tex:{inlineMath:[["$","$"],["\\(","\\)"]]},options:{skipHtmlTags:["script","noscript","style","textarea","pre"]},startup:{ready:()=>{MathJax.startup.defaultReady(),MathJax.startup.promise.then((()=>{t.layout()}))}}};return{id:"mathjax3",init:function(n){t=n;let a=t.getConfig().mathjax3||{},i={...e,...a};i.tex={...e.tex,...a.tex},i.options={...e.options,...a.options},i.startup={...e.startup,...a.startup};let s=i.mathjax||"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";i.mathjax=null,window.MathJax=i,function(t,e){let n=document.createElement("script");n.type="text/javascript",n.id="MathJax-script",n.src=t,n.async=!0,n.onload=()=>{"function"==typeof e&&(e.call(),e=null)},document.head.appendChild(n)}(s,(function(){t.addEventListener("slidechanged",(function(t){MathJax.typeset()}))}))}}}})}));
-</script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
@@ -3607,27 +3680,9 @@ window.QuartoSupport = function () {
 
         maxScale: 2,
 
-        math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
         // reveal.js plugins
         plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
 
-          RevealMath,
           RevealNotes,
           RevealSearch,
           RevealZoom

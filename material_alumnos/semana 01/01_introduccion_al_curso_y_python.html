@@ -690,12 +690,93 @@ width: auto !important;
 height: auto !important;
 z-index: 30 !important;
 }
+#MathJax_Message {
+display: none !important;
+}
+.reveal .slides section.probability-intro figure {
+margin: 0;
+}
+.reveal .slides section.probability-intro .column:first-child img {
+max-height: 430px;
+width: auto;
+}
+.reveal .slides section.probability-intro .column:last-child img {
+max-height: 205px;
+width: auto;
+}
+.reveal .slides section.probability-intro .column:last-child .quarto-figure {
+margin-bottom: 0.4rem;
+}
+.reveal .slides section.compact {
+font-size: 0.72em;
+}
+.reveal .slides section.compact h2 {
+font-size: 1.25em;
+line-height: 1.1;
+margin-bottom: 0.35em;
+}
+.reveal .slides section.compact p,
+.reveal .slides section.compact li {
+line-height: 1.22;
+margin-top: 0.18em;
+margin-bottom: 0.18em;
+}
+.reveal .slides section.compact ul,
+.reveal .slides section.compact ol {
+margin-top: 0.25em;
+margin-bottom: 0.25em;
+}
+.reveal .slides section.compact pre {
+margin-top: 0.35em;
+margin-bottom: 0.35em;
+}
+.reveal .slides section.compact pre code {
+max-height: 360px;
+}
+.reveal .slides section.compact.mid-font div {
+font-size: 26px;
+}
+.reveal .slides section.dense-code {
+font-size: 0.66em;
+}
+.reveal .slides section.dense-code pre {
+margin-top: 0.18em;
+margin-bottom: 0.18em;
+}
+.reveal .slides section.dense-code pre code {
+max-height: 300px;
+}
+.reveal .slides section.figure-compact img {
+max-height: 560px;
+}
+.reveal .slides section.video-compact video {
+max-height: 360px;
+width: auto;
+}
+.empirical-static {
+display: none;
+}
+.print-only {
+display: none !important;
+}
 @media print {
 .reveal-viewport::before {
 height: 20px;
 }
 .reveal .slide-logo {
 max-height: 70px !important;
+}
+.empirical-animated {
+display: none !important;
+}
+.empirical-static {
+display: block !important;
+}
+.screen-only {
+display: none !important;
+}
+.print-only {
+display: block !important;
 }
 }
 @media (max-width: 1100px) {
@@ -1588,16 +1669,13 @@ margin-right: 0; }
 </ul>
 </div>
 </section>
-<section id="introducción-a-python-1" class="slide level2 smaller">
+<section id="introducción-a-python-1" class="slide level2 compact dense-code">
 <h2>Introducción a Python</h2>
-<div class="fragment">
 <p>Comparemos el código de una función simple llamada <code>suma</code> que:</p>
 <ul>
 <li>Tiene dos parámetros <code>a</code> y <code>b</code></li>
 <li>Solicita al usuario ingresar los números y retorna la suma</li>
 </ul>
-</div>
-<div class="fragment">
 <p><strong>C</strong>:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource c number-lines code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href></a><span class="pp">#include </span><span class="im">&lt;stdio.h&gt;</span></span>
 <span id="cb1-2"><a href></a></span>
@@ -1614,11 +1692,9 @@ margin-right: 0; }
 <span id="cb1-13"><a href></a>    printf<span class="op">(</span><span class="st">&quot;La suma es: </span><span class="sc">%d\n</span><span class="st">&quot;</span><span class="op">,</span> suma<span class="op">(</span>num1<span class="op">,</span> num2<span class="op">));</span></span>
 <span id="cb1-14"><a href></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
 <span id="cb1-15"><a href></a><span class="op">}</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
-<section id="introducción-a-python-2" class="slide level2 smaller">
+<section id="introducción-a-python-2" class="slide level2 compact dense-code">
 <h2>Introducción a Python</h2>
-<div class="fragment">
 <p><strong>Java</strong>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource java number-lines code-with-copy"><code class="sourceCode java"><span id="cb2-1"><a href></a><span class="kw">import</span> <span class="im">java</span><span class="op">.</span><span class="im">util</span><span class="op">.</span><span class="im">Scanner</span><span class="op">;</span></span>
 <span id="cb2-2"><a href></a></span>
@@ -1636,8 +1712,9 @@ margin-right: 0; }
 <span id="cb2-14"><a href></a>        <span class="bu">System</span><span class="op">.</span><span class="fu">out</span><span class="op">.</span><span class="fu">println</span><span class="op">(</span><span class="st">&quot;La suma es: &quot;</span> <span class="op">+</span> <span class="fu">suma</span><span class="op">(</span>num1<span class="op">,</span> num2<span class="op">));</span></span>
 <span id="cb2-15"><a href></a>    <span class="op">}</span></span>
 <span id="cb2-16"><a href></a><span class="op">}</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="fragment">
+</section>
+<section id="introducción-a-python-3" class="slide level2 compact dense-code">
+<h2>Introducción a Python</h2>
 <p><strong>Python</strong>:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href></a><span class="kw">def</span> suma(a, b):</span>
 <span id="cb3-2"><a href></a>    <span class="cf">return</span> a <span class="op">+</span> b</span>
@@ -1649,7 +1726,6 @@ margin-right: 0; }
 <span id="cb3-8"><a href></a></span>
 <span id="cb3-9"><a href></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
 <span id="cb3-10"><a href></a>    main()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section>
 <section id="quiénes-usan-python" class="slide level2">
 <h2>¿Quiénes usan Python?</h2>
